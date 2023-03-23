@@ -3,6 +3,9 @@ mod ownership;
 mod structs;
 mod enums;
 mod collections;
+mod generics;
+mod traits;
+mod lifetimes;
 
 const THREE_HOURS_IN_SECONDS: u32 = 60*60*3;
 
@@ -19,7 +22,10 @@ fn main() {
     if false { ownership::memory_ownership(); }
     if false { structs::structs(); } 
     if false { enums::enums(); }
-    if true { collections::collections(); }
+    if false { collections::collections(); }
+    if false { generics::generics(); }
+    if false { traits::traits(); }
+    if true { lifetimes::lifetimes(); }
 }
 
 fn print_to_console() {

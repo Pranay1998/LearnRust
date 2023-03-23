@@ -26,7 +26,7 @@ pub fn collections() {
 
     scores.insert("hello", 10);
 
-    let val = scores.get("hello").copied().unwrap_or(0);
+    let _val = scores.get("hello").copied().unwrap_or(0);
 
 
 
