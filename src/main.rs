@@ -1,19 +1,25 @@
 mod guessing_game;
 mod ownership;
 mod structs;
+mod enums;
+mod collections;
 
 const THREE_HOURS_IN_SECONDS: u32 = 60*60*3;
 
 fn main() {
-    print_to_console();
-    variables_and_mutability();
-    shadowing();
-    compound_types();
-    println!("Return value of function is {}", statements_and_expressions());
-    control_flow();
+    if false {
+        print_to_console();
+        variables_and_mutability();
+        shadowing();
+        compound_types();
+        println!("Return value of function is {}", statements_and_expressions());
+        control_flow();
+    }
     if false { guessing_game::guessing_game(); }
     if false { ownership::memory_ownership(); }
-    if true { structs::structs(); } 
+    if false { structs::structs(); } 
+    if false { enums::enums(); }
+    if true { collections::collections(); }
 }
 
 fn print_to_console() {
