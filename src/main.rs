@@ -6,6 +6,7 @@ mod collections;
 mod generics;
 mod traits;
 mod lifetimes;
+mod functional;
 
 const THREE_HOURS_IN_SECONDS: u32 = 60*60*3;
 
@@ -25,7 +26,8 @@ fn main() {
     if false { collections::collections(); }
     if false { generics::generics(); }
     if false { traits::traits(); }
-    if true { lifetimes::lifetimes(); }
+    if false { lifetimes::lifetimes(); }
+    if true { functional::functional(); }
 }
 
 fn print_to_console() {
