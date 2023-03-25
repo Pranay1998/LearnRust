@@ -1,3 +1,5 @@
+use std::mem;
+
 mod guessing_game;
 mod ownership;
 mod structs;
@@ -7,6 +9,8 @@ mod generics;
 mod traits;
 mod lifetimes;
 mod functional;
+mod smart_pointers;
+mod memory_leak;
 
 const THREE_HOURS_IN_SECONDS: u32 = 60*60*3;
 
@@ -27,7 +31,9 @@ fn main() {
     if false { generics::generics(); }
     if false { traits::traits(); }
     if false { lifetimes::lifetimes(); }
-    if true { functional::functional(); }
+    if false { functional::functional(); }
+    if false { smart_pointers::smart_pointers(); }
+    if true { memory_leak::memory_leak() }
 }
 
 fn print_to_console() {
