@@ -1,3 +1,5 @@
+use std::mem;
+
 mod guessing_game;
 mod ownership;
 mod structs;
@@ -6,6 +8,13 @@ mod collections;
 mod generics;
 mod traits;
 mod lifetimes;
+mod functional;
+mod smart_pointers;
+mod memory_leak;
+mod concurrency;
+mod oop;
+mod state_pattern;
+mod pattern_matching;
 
 const THREE_HOURS_IN_SECONDS: u32 = 60*60*3;
 
@@ -25,7 +34,14 @@ fn main() {
     if false { collections::collections(); }
     if false { generics::generics(); }
     if false { traits::traits(); }
-    if true { lifetimes::lifetimes(); }
+    if false { lifetimes::lifetimes(); }
+    if false { functional::functional(); }
+    if false { smart_pointers::smart_pointers(); }
+    if false { memory_leak::memory_leak(); }
+    if false { concurrency::concurrency(); }
+    if false { oop::oop(); }
+    if false { state_pattern::state_pattern(); }
+    if true { pattern_matching::pattern_matching(); }
 }
 
 fn print_to_console() {

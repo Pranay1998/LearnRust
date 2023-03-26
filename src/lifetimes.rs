@@ -1,5 +1,11 @@
 struct ImportantExcerpt<'a> {
-    part: &'a str
+    _part: &'a str
+}
+
+impl<'a> ImportantExcerpt<'a> {
+    fn _level(&self) -> i32 {
+        3
+    }
 }
 
 pub fn lifetimes() {
@@ -14,6 +20,9 @@ pub fn lifetimes() {
 
     let novel = String::from("Call me Ishmael, Some years ago...");
     let first_sentance = novel.split('.').next().expect("Could not find a '.'");
+    let _i = ImportantExcerpt {
+        _part: first_sentance
+    };
 
 }
 
